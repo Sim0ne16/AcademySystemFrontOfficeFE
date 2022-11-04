@@ -1,0 +1,62 @@
+<div *ngIf="!isModify">
+    <div class="card" style="width: 18rem;">
+        <img src="{{this.student.urlImage}}" class="card-img-top" alt="Immagine Del Profilo">
+        <div class="card-body">
+            <h5 class="card-title">Profilo</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{this.student.name}} {{this.student.lastName}}</li>
+            <li class="list-group-item">{{this.student.dateOfBirth}}</li>
+            <li class="list-group-item">{{this.student.email}}</li>
+        </ul>
+        <div class="card-body">
+            <button (click)="editProfile()" type="button" class="btn btn-info">Modifica</button>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="formStudent && isModify">
+    <form [formGroup]="formStudent">
+        <div class="container d-flex flex-column  w-50 ">
+            <img src="{{formStudent.value['urlImage']}}" alt="Foto Profilo"
+                 class="rounded-circle w-25 align-self-center">
+
+            <label for="urlImage">Url Immagine:</label>
+            <input id="urlImage" type="text" formControlName="urlImage" placeholder="inserisci il link dell'immagine">
+
+
+            <label for="name">Nome:</label>
+            <input class="w-25" id="name" type="text" formControlName="name">
+
+            <label for="lastName">Cognome:</label>
+            <input class="w-25" id="lastName" type="text" formControlName="lastName">
+
+            <label for="dateOfBirth">Data di nascita: </label>
+            <input class="w-25" id="dateOfBirth" type="date" formControlName="dateOfBirth">
+
+            <label for="email">Email:</label>
+            <input class="w-25" id="email" type="text" formControlName="email">
+
+
+        </div>
+    </form>
+    <div id="academyInfo" class="d-flex justify-content-center">
+        <p class="border border-dark p-2 m-4" id="academyName" type="text">{{formStudent.value['academyName']}}</p>
+        <p class="border border-dark p-2 m-4" id="academyStartDate"
+           type="date">Inizio : {{formStudent.value['academyStartDate']}}</p>
+        <p class="border border-dark p-2 m-4" id="academyEndDate"
+           type="date">Fine : {{formStudent.value['academyEndDate']}}</p>
+    </div>
+    <div id="modify" class="d-flex justify-content-center ">
+        <button type="button" class="btn btn-info m-2" (click)="putStudent()">Modifica</button>
+        <button type="button" class="btn btn-info m-2" (click)="goBack()">Torna Indietro</button>
+    </div>
+</div>
+
+
+
+<div id="buttons">
+    <button type="button" class="btn btn-info m-2" routerLink="">Aggiungi Feedback</button>
+</div>
+
