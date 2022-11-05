@@ -1,1 +1,38 @@
-<p>feedback works!</p>
+
+<form [formGroup]="formFeedback">
+  <div class="container d-flex flex-column w-50">
+  <label for="morningEnergyVote">Quanto ti senti energico all'inizio dell'incontro?</label>
+  <input class="w-25" id="morningEnergyVote" min="1" max="10" placeholder="1-10" type="number" required formControlName="morningEnergyVote" />
+
+  <label for="morningHappinessVote">Quanto ti senti felice all'inizio dell'incontro?</label>
+  <input class="w-25" id="morningHappinessVote" min="1" max="10" placeholder="1-10" type="number" formControlName="morningHappinessVote" />
+
+  <label for="doneExerciseVote">Quanto hai svolto tutti" gli esercizi proposti per casa?</label>
+  <input class="w-25" id="doneExerciseVote" min="1" max="10" placeholder="1-10" type="number" formControlName="doneExerciseVote" />
+
+  <label for="eveningEnergyVote">Quanto ti senti energico dopo l'incontro?</label>
+  <input class="w-25" id="eveningEnergyVote" min="1" max="10" placeholder="1-10" type="number" formControlName="eveningEnergyVote" />
+
+  <label for="eveningHappinessVote">Quanto ti senti felice dopo l'incontro?</label>
+  <input class="w-25" id="eveningHappinessVote" min="1" max="10" placeholder="1-10" type="number" formControlName="eveningHappinessVote" />
+
+  <label for="comprehensionVote">Quanto pensi di aver compreso gli argomenti trattati</label>
+  <input class="w-25" id="comprehensionVote" min="1" max="10" placeholder="1-10" type="number" formControlName="comprehensionVote" />
+
+  <label for="suggestions">Hai note/consigli riguardo l'incontro di oggi?</label>
+  <input class="w-25" id="suggestions" placeholder="..." type="text" formControlName="suggestions" />
+</div>
+
+</form>
+<div id="modify" class="d-flex justify-content-center">
+<button
+type="button"
+class="btn btn-info m-2"
+[disabled]="!this.formFeedback.valid"
+(click)="insertFeedback()"
+>
+Modifica
+</button>
+</div>
+
+
