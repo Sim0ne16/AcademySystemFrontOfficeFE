@@ -19,7 +19,7 @@
   <label for="comprehensionVote">Quanto pensi di aver compreso gli argomenti trattati</label>
   <input class="w-25" id="comprehensionVote" min="1" max="10" placeholder="1-10" type="number" formControlName="comprehensionVote" />
 
-  <label for="suggestions">Hai note/consigli riguardo l'incontro di oggi?</label>
+  <label for="suggestions">Note o consigli riguardo l'incontro di oggi?</label>
   <input class="w-25" id="suggestions" placeholder="..." type="text" formControlName="suggestions" />
 </div>
 
@@ -33,6 +33,8 @@ class="btn btn-info m-2"
 >
 Modifica
 </button>
+  <button type="button" class="btn btn-info m-2" (click)="goBack()">
+    Torna Indietro
+  </button>
 </div>
-
 

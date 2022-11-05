@@ -2,7 +2,7 @@ import {Student} from "./StudentModel";
 
 export interface Feedback{
     id: number,
-    date : Date,
+    date : string,
     student : Student,
 
     morningEnergyVote : number,
