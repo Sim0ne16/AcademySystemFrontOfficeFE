@@ -33,10 +33,30 @@
         <button
                 type="button"
                 class="btn btn-info m-2"
-                routerLink="feedback-student"
+                routerLink="feedback"
         >
             Aggiungi Feedback
         </button>
+        <button
+                type="button"
+                class="btn btn-info m-2"
+                routerLink="trend"
+        >
+            Trend
+        </button>
+      <!-- Non funziona atm-->
+        <div id="image-trend" [ngSwitch]="personalTrendAverageValue">
+          <div *ngSwitchCase="personalTrendAverageValue<5">
+              <img src="assets/red-face.jpg" routerLink="trend" alt="trend-image">
+          </div>
+            <div *ngSwitchCase="personalTrendAverageValue>=5 && personalTrendAverageValue<7">
+                <img src="assets/red-face.jpg" routerLink="trend" alt="trend-image">
+            </div>
+            <div *ngSwitchCase="personalTrendAverageValue>=7">
+                <img src="assets/red-face.jpg" routerLink="trend" alt="trend-image">
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -94,4 +114,5 @@
             Torna Indietro
         </button>
     </div>
+
 </div>

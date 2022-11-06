@@ -1,6 +1,7 @@
 export enum AppRoutes{
- Home = 'home-student',
- Feedback = 'feedback-student'
+ Home = 'home',
+ Feedback = 'feedback',
+ Trend ="trend"
 }
 
 

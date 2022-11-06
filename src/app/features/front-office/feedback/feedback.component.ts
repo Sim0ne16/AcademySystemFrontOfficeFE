@@ -1,8 +1,8 @@
-import {FeedbackService} from '../../core/services/feedback.service';
-import {Student} from '../../shared/models/StudentModel';
+import {FeedbackService} from '../../../core/services/front-office/feedback.service';
+import {Student} from '../../../shared/models/StudentModel';
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators, FormGroup} from '@angular/forms';
-import {StudentService} from 'src/app/core/services/student.service';
+import {StudentService} from 'src/app/core/services/front-office/student.service';
 import {Feedback} from 'src/app/shared/models/FeedbackModel';
 import * as moment from "moment";
 import {Location} from "@angular/common";

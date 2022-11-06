@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {lastValueFrom} from "rxjs";
-import {Server} from "../../shared/consts/Server";
-import {Student} from "../../shared/models/StudentModel";
+import {Server} from "../../../shared/consts/Server";
+import {Student} from "../../../shared/models/StudentModel";
 
 @Injectable({
   providedIn: 'root'

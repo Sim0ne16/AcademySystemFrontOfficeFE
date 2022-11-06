@@ -1,4 +1,4 @@
-import { Feedback } from './../../shared/models/FeedbackModel';
+import { Feedback } from '../../../shared/models/FeedbackModel';
 import { lastValueFrom } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';

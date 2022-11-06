@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {StudentService} from 'src/app/core/services/student.service';
-import {Student} from "../../shared/models/StudentModel";
-import {Academy} from "../../shared/models/AcademyModel";
+import {StudentService} from 'src/app/core/services/front-office/student.service';
+import {Student} from "../../../shared/models/StudentModel";
+import {Academy} from "../../../shared/models/AcademyModel";
 import {Location} from "@angular/common";
 
 @Component({
@@ -15,10 +15,11 @@ export class HomeStudentComponent implements OnInit {
     isModify : boolean = false
     formStudent !: FormGroup
     student !: Student
+    //Questo valore appartiene all'user-trend ma serve anche qua per l'ngSwitch
+    public personalTrendAverageValue = 6
 
     constructor(private fb: FormBuilder,
-                private studentService: StudentService,
-                private location : Location) {
+                private studentService: StudentService) {
 
     }
 
@@ -72,7 +73,6 @@ export class HomeStudentComponent implements OnInit {
     }
 
     goBack() {
-        this.location.back()
         this.isModify = false
     }
 }

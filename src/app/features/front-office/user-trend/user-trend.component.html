@@ -1,0 +1,18 @@
+<div id="container" class="d-flex ">
+    <h1>Andamento: </h1>
+    <div id="total-chart"  style=" width: 800px; height: 400px">
+<canvas baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [type]="'bar'">
+</canvas>
+    </div>
+</div>
+<h2> Valore Media Andamento : {{personalTrendAverageValue}}</h2>
+<h2> Valore Media Andamento Academy : {{academyTrendAverageValue}}</h2>
+
+<button type="button" class="btn btn-info m-2" (click)="goBack()">
+    Torna Indietro
+</button>
