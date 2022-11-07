@@ -13,7 +13,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     imports: [
         CommonModule,
         HomeStudentRoutingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+
     ],
   exports:[HomeStudentComponent]
 })

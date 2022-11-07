@@ -3,12 +3,14 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {StudentService} from 'src/app/core/services/front-office/student.service';
 import {Student} from "../../../shared/models/StudentModel";
 import {Academy} from "../../../shared/models/AcademyModel";
-import {Location} from "@angular/common";
+import {pulseAnimation,} from 'angular-animations';
+
 
 @Component({
     selector: 'app-home-student',
     templateUrl: './home-student.component.html',
-    styleUrls: ['./home-student.component.scss']
+    styleUrls: ['./home-student.component.scss'],
+    animations: [ pulseAnimation({ anchor: 'pulse' })]
 })
 export class HomeStudentComponent implements OnInit {
 
@@ -16,7 +18,10 @@ export class HomeStudentComponent implements OnInit {
     formStudent !: FormGroup
     student !: Student
     //Questo valore appartiene all'user-trend ma serve anche qua per l'ngSwitch
-    public personalTrendAverageValue = 6
+    personalTrendAverageValue : number = 5
+
+    animationState = false;
+    animationWithState = false;
 
     constructor(private fb: FormBuilder,
                 private studentService: StudentService) {
@@ -67,6 +72,16 @@ export class HomeStudentComponent implements OnInit {
 
     }
     }
+
+    animate() {
+        this.animationState = false;
+        setTimeout(() => {
+            this.animationState = true;
+            this.animationWithState = !this.animationWithState;
+        }, 1);
+    }
+
+
 
     editProfile() {
         this.isModify = true

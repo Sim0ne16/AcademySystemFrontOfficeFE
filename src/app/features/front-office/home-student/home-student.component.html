@@ -1,118 +1,119 @@
-<div *ngIf="!isModify">
-    <div class="card" style="width: 18rem">
-        <img
-                src="{{ this.student.urlImage }}"
-                class="card-img-top"
-                alt="Immagine Del Profilo"
-        />
-        <div class="card-body">
-            <h5 class="card-title">
-                {{ this.student.name }} {{ this.student.lastName }}
-            </h5>
+<main>
+    <div *ngIf="!isModify">
+        <div class="card" style="width: 18rem">
+            <img
+                    src="{{ this.student.urlImage }}"
+                    class="card-img-top"
+                    alt="Immagine Del Profilo"
+            />
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{ this.student.name }} {{ this.student.lastName }}
+                </h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    Data di nascita: {{ this.student.dateOfBirth }}
+                </li>
+                <li class="list-group-item">Email: {{ this.student.email }}</li>
+                <li class="list-group-item">{{ formStudent.value["academyName"] }}</li>
+                <li class="list-group-item">
+                    Inizio: {{ formStudent.value["academyStartDate"] }}
+                </li>
+                <li class="list-group-item">
+                    Fine: {{ formStudent.value["academyEndDate"] }}
+                </li>
+            </ul>
+            <div class="card-body">
+                <button (click)="editProfile()" type="button" class="btn btn-info">
+                    Modifica
+                </button>
+            </div>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-                Data di nascita: {{ this.student.dateOfBirth }}
-            </li>
-            <li class="list-group-item">Email: {{ this.student.email }}</li>
-            <li class="list-group-item">{{ formStudent.value["academyName"] }}</li>
-            <li class="list-group-item">
-                Inizio: {{ formStudent.value["academyStartDate"] }}
-            </li>
-            <li class="list-group-item">
-                Fine: {{ formStudent.value["academyEndDate"] }}
-            </li>
-        </ul>
-        <div class="card-body">
-            <button (click)="editProfile()" type="button" class="btn btn-info">
+        <div id="buttons">
+            <button
+                    type="button"
+                    class="btn btn-info m-2"
+                    routerLink="feedback"
+            >
+                Aggiungi Feedback
+            </button>
+            <button
+                    type="button"
+                    class="btn btn-info m-2"
+                    routerLink="trend"
+            >
+                Trend
+            </button>
+
+            <div  class="d-block" id="image-trend" [ngSwitch]="true">
+                <div *ngSwitchCase="personalTrendAverageValue<5">
+                    <img [@pulse]="animationState" (mouseenter)="animate()" src="assets/red-face.jpg" routerLink="trend" alt="trend-image">
+                </div>
+                <div *ngSwitchCase="personalTrendAverageValue>=5 && personalTrendAverageValue<7">
+                    <img [@pulse]="animationState" (mouseenter)="animate()" src="assets/orange-face.jpg" routerLink="trend" alt="trend-image">
+                </div>
+                <div *ngSwitchDefault>
+                    <img [@pulse]="animationState" (mouseenter)="animate()" src="assets/green-face.jpg" routerLink="trend" alt="trend-image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="d-flex flex-column" *ngIf="formStudent && isModify">
+        <form [formGroup]="formStudent" >
+            <div class="container d-flex flex-column w-100">
+                <img
+                        src="{{ formStudent.value['urlImage'] }}"
+                        alt="Foto Profilo"
+                        class="rounded-circle w-25 align-self-center"
+                />
+
+                <label for="urlImage">Url Immagine:</label>
+                <input
+                        id="urlImage"
+                        type="text"
+                        formControlName="urlImage"
+                        placeholder="inserisci il link dell'immagine"
+                />
+
+                <label for="name">Nome:</label>
+                <input class="w-25" id="name" type="text" formControlName="name"/>
+
+                <label for="lastName">Cognome:</label>
+                <input
+                        class="w-25"
+                        id="lastName"
+                        type="text"
+                        formControlName="lastName"
+                />
+
+                <label for="dateOfBirth">Data di nascita: </label>
+                <input
+                        class="w-25"
+                        id="dateOfBirth"
+                        type="date"
+                        formControlName="dateOfBirth"
+                />
+
+                <label for="email">Email:</label>
+                <input class="w-25" id="email" type="text" formControlName="email"/>
+            </div>
+        </form>
+
+        <div id="modify" class="d-flex justify-content-center">
+            <button
+                    class="btn btn-info m-1 "
+                    [disabled]="!this.formStudent.valid"
+                    (click)="putStudent()"
+            >
                 Modifica
             </button>
-        </div>
-    </div>
-    <div id="buttons">
-        <button
-                type="button"
-                class="btn btn-info m-2"
-                routerLink="feedback"
-        >
-            Aggiungi Feedback
-        </button>
-        <button
-                type="button"
-                class="btn btn-info m-2"
-                routerLink="trend"
-        >
-            Trend
-        </button>
-      <!-- Non funziona atm-->
-        <div id="image-trend" [ngSwitch]="personalTrendAverageValue">
-          <div *ngSwitchCase="personalTrendAverageValue<5">
-              <img src="assets/red-face.jpg" routerLink="trend" alt="trend-image">
-          </div>
-            <div *ngSwitchCase="personalTrendAverageValue>=5 && personalTrendAverageValue<7">
-                <img src="assets/red-face.jpg" routerLink="trend" alt="trend-image">
-            </div>
-            <div *ngSwitchCase="personalTrendAverageValue>=7">
-                <img src="assets/red-face.jpg" routerLink="trend" alt="trend-image">
-            </div>
+            <button class="btn btn-info m-1 " (click)="goBack()">
+                Torna Indietro
+            </button>
         </div>
 
     </div>
-</div>
-
-<div *ngIf="formStudent && isModify">
-    <form [formGroup]="formStudent">
-        <div class="container d-flex flex-column w-50">
-            <img
-                    src="{{ formStudent.value['urlImage'] }}"
-                    alt="Foto Profilo"
-                    class="rounded-circle w-25 align-self-center"
-            />
-
-            <label for="urlImage">Url Immagine:</label>
-            <input
-                    id="urlImage"
-                    type="text"
-                    formControlName="urlImage"
-                    placeholder="inserisci il link dell'immagine"
-            />
-
-            <label for="name">Nome:</label>
-            <input class="w-25" id="name" type="text" formControlName="name"/>
-
-            <label for="lastName">Cognome:</label>
-            <input
-                    class="w-25"
-                    id="lastName"
-                    type="text"
-                    formControlName="lastName"
-            />
-
-            <label for="dateOfBirth">Data di nascita: </label>
-            <input
-                    class="w-25"
-                    id="dateOfBirth"
-                    type="date"
-                    formControlName="dateOfBirth"
-            />
-
-            <label for="email">Email:</label>
-            <input class="w-25" id="email" type="text" formControlName="email"/>
-        </div>
-    </form>
-
-    <div id="modify" class="d-flex justify-content-center">
-        <button
-                type="button"
-                class="btn btn-info m-2"
-                [disabled]="!this.formStudent.valid"
-                (click)="putStudent()"
-        >
-            Modifica
-        </button>
-        <button type="button" class="btn btn-info m-2" (click)="goBack()">
-            Torna Indietro
-        </button>
-    </div>
-
-</div>
+</main>
