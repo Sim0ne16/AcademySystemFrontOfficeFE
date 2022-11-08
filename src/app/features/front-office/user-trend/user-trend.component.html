@@ -1,6 +1,6 @@
-<div id="container" class="d-flex ">
-    <h1>Andamento: </h1>
-    <div id="total-chart"  style=" width: 800px; height: 400px">
+<div id="container1" class="d-flex ">
+    <h1>Hard Skill: </h1>
+    <div id="hard-skill-chart"  style=" width: 800px; height: 400px">
 <canvas baseChart
         [data]="barChartData"
         [options]="barChartOptions"
@@ -10,8 +10,20 @@
 </canvas>
     </div>
 </div>
-<h2> Valore Media Andamento : {{personalTrendAverageValue}}</h2>
-<h2> Valore Media Andamento Academy : {{academyTrendAverageValue}}</h2>
+<h2> Valore Media Andamento Hard Skill : {{personalTrendAverageValue}}</h2>
+
+<div id="container2" class="d-flex ">
+    <h1>Soft Skill: </h1>
+    <div id="soft-skill-chart"  style=" width: 800px; height: 400px">
+        <canvas baseChart
+                [data]="barChartData2"
+                [options]="barChartOptions"
+                [plugins]="barChartPlugins"
+                [legend]="barChartLegend"
+                [type]="'bar'">
+        </canvas>
+    </div>
+</div>
 
 <button type="button" class="btn btn-info m-2" (click)="goBack()">
     Torna Indietro

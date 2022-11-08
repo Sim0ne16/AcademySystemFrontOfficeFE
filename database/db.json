@@ -10,9 +10,9 @@
   "Student": [
     {
       "id": 1,
-      "name": "Pippona",
+      "name": "Francesco",
       "lastName": "Penzi",
-      "dateOfBirth": "2000-11-06",
+      "dateOfBirth": "2000-10-19",
       "email": "pippo@gmail.com",
       "academy": {
         "id": 1,
@@ -20,7 +20,21 @@
         "startDate": "06/06/2022",
         "endDate": "06/10/2022"
       },
-      "urlImage": "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png"
+      "urlImage": "data:image/jpeg;base64,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"
+    }
+  ],
+  "Module": [
+    {
+      "id": 1,
+      "name": "BackEnd"
+    },
+    {
+      "id": 2,
+      "name": "FrontEnd"
+    },
+    {
+      "id": 3,
+      "name": "Database"
     }
   ],
   "Feedback": [
@@ -29,7 +43,7 @@
       "date": "2022-11-05",
       "student": {
         "id": 1,
-        "name": "Pippona",
+        "name": "Francesco",
         "lastName": "Penzi",
         "dateOfBirth": "2000-11-06",
         "email": "pippo@gmail.com",
@@ -48,6 +62,208 @@
       "eveningHappinessVote": 1,
       "morningHappinessVote": 1,
       "suggestions": "a"
+    },
+    {
+      "id": 2,
+      "date": "2022-11-07",
+      "student": {
+        "id": 1,
+        "name": "Francesco",
+        "lastName": "Penzi",
+        "dateOfBirth": "2000-10-19",
+        "email": "pippo@gmail.com",
+        "academy": {
+          "id": 1,
+          "name": "Academy 2022.4",
+          "startDate": "06/06/2022",
+          "endDate": "06/10/2022"
+        },
+        "urlImage": "data:image/jpeg;base64,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"
+      },
+      "comprehensionVote": 7,
+      "doneExerciseVote": 5,
+      "eveningEnergyVote": 6,
+      "morningEnergyVote": 3,
+      "eveningHappinessVote": 7,
+      "morningHappinessVote": 4,
+      "suggestions": "Cazzomene"
+    }
+  ],
+  "StudentTrend": [
+    {
+      "id": 1,
+      "student": {
+        "id": 1,
+        "name": "Francesco",
+        "lastName": "Penzi",
+        "dateOfBirth": "2000-10-19",
+        "email": "pippo@gmail.com",
+        "academy": {
+          "id": 1,
+          "name": "Academy 2022.4",
+          "startDate": "06/06/2022",
+          "endDate": "06/10/2022"
+        },
+        "urlImage": "data:image/jpeg;base64,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"
+      },
+      "module": {
+        "id": 1,
+        "name": "BackEnd"
+      },
+      "kpiHard": [
+        {
+          "id": 1,
+          "rating": 7
+        },
+        {
+          "id": 2,
+          "rating": 6
+        },
+        {
+          "id": 3,
+          "rating": 8
+        }
+      ],
+      "kpiSoft": [
+        {
+          "id": 1,
+          "activeListeningRating": 6,
+          "formalizationRating": 6,
+          "problemSolvingRating": 8,
+          "teamWorkingRating": 5,
+          "objectiveOrientationRating": 8
+        },
+        {
+          "id": 2,
+          "activeListeningRating": 5,
+          "formalizationRating": 5,
+          "problemSolvingRating": 8,
+          "teamWorkingRating": 5,
+          "objectiveOrientationRating": 8
+        },
+        {
+          "id": 3,
+          "activeListeningRating": 7,
+          "formalizationRating": 7,
+          "problemSolvingRating": 8,
+          "teamWorkingRating": 8,
+          "objectiveOrientationRating": 8
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "student": {
+        "id": 1,
+        "name": "Francesco",
+        "lastName": "Penzi",
+        "dateOfBirth": "2000-10-19",
+        "email": "pippo@gmail.com",
+        "academy": {
+          "id": 1,
+          "name": "Academy 2022.4",
+          "startDate": "06/06/2022",
+          "endDate": "06/10/2022"
+        },
+        "urlImage": "data:image/jpeg;base64,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"
+      },
+      "module": {
+        "id": 2,
+        "name": "FrontEnd"
+      },
+      "kpiHard": [
+        {
+          "id": 3,
+          "rating": 5
+        },
+        {
+          "id": 4,
+          "rating": 6
+        },
+        {
+          "id": 5,
+          "rating": 7
+        }
+      ],
+      "kpiSoft": [
+        {
+          "id": 3,
+          "activeListeningRating": 5,
+          "formalizationRating": 5,
+          "problemSolvingRating":8,
+          "teamWorkingRating": 5,
+          "objectiveOrientationRating": 3
+        },
+        {
+          "id": 4,
+          "activeListeningRating": 6,
+          "formalizationRating": 5,
+          "problemSolvingRating": 8,
+          "teamWorkingRating": 7,
+          "objectiveOrientationRating": 6
+        },
+        {
+          "id": 5,
+          "activeListeningRating": 9,
+          "formalizationRating": 9,
+          "problemSolvingRating": 8,
+          "teamWorkingRating": 6,
+          "objectiveOrientationRating": 5
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "student": {
+        "id": 1,
+        "name": "Francesco",
+        "lastName": "Penzi",
+        "dateOfBirth": "2000-10-19",
+        "email": "pippo@gmail.com",
+        "academy": {
+          "id": 1,
+          "name": "Academy 2022.4",
+          "startDate": "06/06/2022",
+          "endDate": "06/10/2022"
+        },
+        "urlImage": "data:image/jpeg;base64,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"
+      },
+      "module": {
+        "id": 2,
+        "name": "Database"
+      },
+      "kpiHard": [
+        {
+          "id": 6,
+          "rating": 8
+        }
+      ],
+      "kpiSoft": [
+        {
+          "id": 6,
+          "activeListeningRating": 5,
+          "formalizationRating": 5,
+          "problemSolvingRating": 4,
+          "teamWorkingRating": 5,
+          "objectiveOrientationRating": 3
+        },
+        {
+          "id": 7,
+          "activeListeningRating": 6,
+          "formalizationRating": 5,
+          "problemSolvingRating": 7,
+          "teamWorkingRating": 7,
+          "objectiveOrientationRating": 6
+        },
+        {
+          "id": 8,
+          "activeListeningRating": 9,
+          "formalizationRating": 9,
+          "problemSolvingRating": 5,
+          "teamWorkingRating": 6,
+          "objectiveOrientationRating": 5
+        }
+      ]
     }
   ]
 }

@@ -18,7 +18,7 @@ export class HomeStudentComponent implements OnInit {
     formStudent !: FormGroup
     student !: Student
     //Questo valore appartiene all'user-trend ma serve anche qua per l'ngSwitch
-    personalTrendAverageValue : number = 5
+    personalTrendAverageValue : number = 8
 
     animationState = false;
     animationWithState = false;
